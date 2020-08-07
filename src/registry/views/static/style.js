@@ -1,23 +1,36 @@
-module.exports = `body {
+// url("https://m.media-amazon.com/images/G/01/katal/AmazonEmberLight._CB497338012_.woff")
+// https://m.media-amazon.com/images/G/01/katal/AmazonEmberBold._CB459953743_.woff2
+// https://m.media-amazon.com/images/G/01/katal/katal-flo-icon-font._CB451345079_.woff2
+module.exports = `
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("https://m.media-amazon.com/images/G/01/katal/AmazonEmberRg._CB497338012_.woff2");
+}
+body {
   width: 1024px;
   margin: 0 auto;
-  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+  font-family: Amazon Ember,Arial,sans-serif,Helvetica Neue", Calibri, Helvetica;
 }
-
 h1, h2, h3 {
   color: darkred;
   float: left;
   width: 100%;
 }
+.logo {
+  display: block;
+}
+.logo > img {
+  max-height: 10rem;
+}
 
 h1 {
   margin-top: 0;
-  color: #000;
-  border-bottom: 1px solid #000;
+  color: #002F36;
+  border-bottom: 1px solid #002F36;
 }
 
 a {
-  color: #000;
+  color: #002F36;
 }
 
 p {
@@ -39,7 +52,7 @@ p {
 
 .preview {
   height: 300px;
-  border: 1px solid #000;
+  border: 1px solid #002F36;
 }
 
 .table {
@@ -52,8 +65,8 @@ p {
 }
 
 .row {
-  background-color: #F9F9F9;
-  border: 1px solid #000;
+  background-color: #EBEEEF;
+  border: 1px solid #002F36;
   width: 100%;
   display: flex;
   padding: 10px 0px;
@@ -64,8 +77,8 @@ p {
 }
 
 .row.header {
-  background-color: #EBE9E9;
-  border: 1px solid #000 !important;
+  background-color: #D5DBDB;
+  border: 1px solid #002F36 !important;
 }
 
 .row.header div {
@@ -87,7 +100,7 @@ p {
 }
 
 .componentRow:hover {
-  background-color: #EBE9E9;
+  background-color: #D5DBDB;
 }
 
 .componentRow .title .name {
@@ -128,7 +141,7 @@ p {
 }
 
 .field p {
-  color: #8B0000;
+  color: #008296;
   font-weight: bold;
   margin-right: 10px;
 }
@@ -137,7 +150,7 @@ input[type=text],
 textarea {
   height: 43px;
   font-family: Arial;
-  border: 1px solid #8B0000;
+  border: 1px solid #008296;
   margin-bottom: 10px;
   font-size: 20px;
   padding: 10px;
@@ -244,7 +257,7 @@ textarea {
 .component-state-experimental,
 .details-state .component-state-experimental,
 .table .component-state-experimental {
-  background-color: #B9961E;
+  background-color: #FFC400;
   height: 17px;
   padding: 1px 5px;
 }
@@ -252,19 +265,18 @@ textarea {
 .component-state-deprecated,
 .details-state .component-state-deprecated,
 .table .component-state-deprecated {
-  background-color: #B9381E;
+  background-color: #CC0C39;
   height: 17px;
   padding: 1px 5px;
 }
 
 a.tab-link {
-  color: #8B0000;
+  color: #008296;
+  text-decoration: none;
 }
 
 a.tab-link.selected {
-  background-color: #8b0000;
-  color: #fff;
-  text-decoration: none;
+  background-color: #E3ECED;
 }
 
 .bold {

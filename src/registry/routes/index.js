@@ -90,7 +90,7 @@ module.exports = function(repository) {
                     q: req.query.q || '',
                     stateCounts,
                     templates: repository.getTemplatesInfo(),
-                    title: 'OpenComponents Registry'
+                    title: 'Combee Registry'
                   })
                 )
               );
