@@ -3,16 +3,16 @@
 // https://m.media-amazon.com/images/G/01/katal/katal-flo-icon-font._CB451345079_.woff2
 module.exports = `
 @font-face {
-  font-family: "Amazon Ember";
+  font-family: Amazon Ember;
   src: url("https://m.media-amazon.com/images/G/01/katal/AmazonEmberRg._CB497338012_.woff2");
 }
 body {
   width: 1024px;
   margin: 0 auto;
-  font-family: Amazon Ember,Arial,sans-serif,Helvetica Neue", Calibri, Helvetica;
+  font-family: Amazon Ember, "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial, sans-serif;
 }
 h1, h2, h3 {
-  color: darkred;
+  color: #002F36;
   float: left;
   width: 100%;
 }
@@ -271,7 +271,7 @@ textarea {
 }
 
 a.tab-link {
-  color: #008296;
+  color: #002f36;
   text-decoration: none;
 }
 
