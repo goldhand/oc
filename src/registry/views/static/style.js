@@ -46,13 +46,21 @@ p {
 
 .code,
 .preview {
-  float: left;
   width: 100%;
 }
 
 .preview {
-  height: 300px;
+  height: 500px;
   border: 1px solid #002F36;
+}
+
+.code-example pre code {
+  float: left;
+  font-size: 1.5em;
+  background-color: #EBEEEF;
+  border: 1px solid #002F36;
+  display: block;
+  padding: 20px;
 }
 
 .table {

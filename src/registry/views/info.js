@@ -1,3 +1,10 @@
+function htmlEntities(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
 module.exports = vm => {
   const componentAuthor = require('./partials/component-author')(vm);
   const componentParameters = require('./partials/component-parameters')(vm);
@@ -13,9 +20,7 @@ module.exports = vm => {
 
   const { component, dependencies, href, repositoryUrl, sandBoxDefaultQs } = vm;
 
-  const componentHref = `${href}${component.name}/${
-    component.version
-  }/${sandBoxDefaultQs}`;
+  const componentHref = `${href}${component.name}/${component.version}/${sandBoxDefaultQs}`;
 
   const publishDate = component.oc.date
     ? new Date(component.oc.date)
@@ -33,6 +38,8 @@ module.exports = vm => {
       : compiler + '@' + component.oc.files.template.version
   })`;
 
+  const codeExample = `<oc-component href="${componentHref}"></oc-component>`;
+
   const content = `<a class="back" href="${href}">&lt;&lt; All components</a>
     <h2>${component.name} &nbsp;${componentVersions()}</h2>
     <p class="w-100">${component.description} ${componentState()}</p>
@@ -45,6 +52,14 @@ module.exports = vm => {
     ${showArray('Node.js dependencies', dependencies)}
     ${showArray('Plugin dependencies', component.oc.plugins)}
     ${componentParameters()}
+    <h3>
+      Example
+    </h3>
+    <div class="code-example">
+    <pre><code>
+${htmlEntities(codeExample)}
+    </code></pre>
+    </div>
     <h3>Code</h3>
     <p>
       You can edit the following area and then
@@ -52,14 +67,16 @@ module.exports = vm => {
       to apply the change into the preview window.
     </p>
     <div class="field"><p>Component's href:</p></div>
-    <textarea class="w-100" id="href" placeholder="Insert component href here">${componentHref}</textarea>    
+    <textarea class="w-100" id="href" placeholder="Insert component href here">${componentHref}</textarea>
     <div class="field"><p>Accept-Language header:</p></div>
     <input class="w-100" id="lang" type="text" value="*" />
     <h3>
       Preview
       <a class="refresh-preview" href="#refresh">(Refresh)</a>
     </h3>
-    <iframe class="preview" src="~preview/${sandBoxDefaultQs}"></iframe>`;
+    <iframe class="preview" src="~preview/${sandBoxDefaultQs}"></iframe>
+    </div>
+ `;
 
   const scripts = `<script>var thisComponentHref="${href}${component.name}/";
     ${infoJS}
