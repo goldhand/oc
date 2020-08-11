@@ -18,21 +18,21 @@ module.exports = function(repository) {
       return res.status(409).json({ error: res.errorDetails });
     }
 
-    let validationResult = validator.validateOcCliVersion(
-      req.headers['user-agent']
-    );
-    if (!validationResult.isValid) {
-      res.errorDetails = format(
-        strings.errors.registry.OC_CLI_VERSION_IS_NOT_VALID,
-        validationResult.error.registryVersion,
-        validationResult.error.cliVersion
-      );
-      return res.status(409).json({
-        code: 'cli_version_not_valid',
-        error: res.errorDetails,
-        details: validationResult.error
-      });
-    }
+    // let validationResult = validator.validateOcCliVersion(
+    //   req.headers['user-agent']
+    // );
+    // if (!validationResult.isValid) {
+    //   res.errorDetails = format(
+    //     strings.errors.registry.OC_CLI_VERSION_IS_NOT_VALID,
+    //     validationResult.error.registryVersion,
+    //     validationResult.error.cliVersion
+    //   );
+    //   return res.status(409).json({
+    //     code: 'cli_version_not_valid',
+    //     error: res.errorDetails,
+    //     details: validationResult.error
+    //   });
+    // }
 
     validationResult = validator.validateNodeVersion(
       req.headers['user-agent'],
