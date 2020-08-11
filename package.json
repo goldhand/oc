@@ -4,7 +4,7 @@
   "description": "A framework for developing and distributing html components",
   "main": "./src/index.js",
   "bin": {
-    "oc": "./src/oc-cli.js"
+    "combee": "./src/oc-cli.js"
   },
   "scripts": {
     "build": "node tasks/build.js",
