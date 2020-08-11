@@ -32,19 +32,19 @@ ${yellow(validMockObject)}`;
 
 const initSuccess = (componentName, componentPath) => {
   const success = `Success! Created ${componentName} at ${componentPath}`;
-  return `${green(success)} 
+  return `${green(success)}
 
 From here you can run several commands
 
-${green('oc --help')}
+${green('combee --help')}
 To see a detailed list of all the commands available
 
 We suggest that you begin by typing:
 
-${green('oc dev . 3030')}
+${green('combee dev . 3030')}
 
-If you have questions, issues or feedback about OpenComponents, please, join us on Gitter:
-${green('https://gitter.im/opentable/oc')}
+If you have questions, issues or feedback about Combee, please, join us on slack:
+${green('#combee')}
 
 Happy coding
 
@@ -56,7 +56,7 @@ Happy coding
 module.exports = {
   commands: {
     cli: {
-      MOCK_PLUGIN: 'oc mock plugin <pluginName> "some value"',
+      MOCK_PLUGIN: 'combee mock plugin <pluginName> "some value"',
       UPGRADE: '[sudo] npm i -g oc@{0}'
     }
   },
@@ -132,7 +132,7 @@ module.exports = {
       NODE_CLI_VERSION_IS_NOT_VALID:
         'Node CLI version is not valid: Registry {0}, CLI {1}',
       OC_CLI_VERSION_IS_NOT_VALID:
-        'OC CLI version is not valid: Registry {0}, CLI {1}',
+        'Combee CLI version is not valid: Registry {0}, CLI {1}',
       PARAMETER_WRONG_FORMAT: 'Parameters are not correctly formatted: {0}',
       PARAMETER_WRONG_FORMAT_CODE: 'wrong type',
       PLUGIN_NOT_FOUND: 'Component is trying to use un-registered plugins: {0}',
@@ -168,9 +168,9 @@ module.exports = {
       NODE_CLI_VERSION_NEEDS_UPGRADE:
         "the version of used node is invalid. Try to upgrade node to version matching '{0}'",
       NODE_CLI_VERSION_UNSUPPORTED:
-        "ALERT: You're currently running OC on an unsupported Node version ({0}).\nPlease upgrade Node to >= {1}.",
+        "ALERT: You're currently running Combee on an unsupported Node version ({0}).\nPlease upgrade Node to >= {1}.",
       OC_CLI_VERSION_NEEDS_UPGRADE:
-        'the version of used OC CLI is invalid. Try to upgrade OC CLI running {0}',
+        'the version of used Combee CLI is invalid. Try to upgrade Combee CLI running {0}',
       PACKAGE_CREATION_FAIL: 'An error happened when creating the package: {0}',
       PACKAGING_FAIL: 'an error happened while packaging {0}: {1}',
       PLUGIN_MISSING_FROM_REGISTRY:
@@ -179,7 +179,7 @@ module.exports = {
         'The port {0} is already in use. Specify the optional port parameter to use another port.',
       PUBLISHING_FAIL: 'An error happened when publishing the component: {0}',
       REGISTRY_NOT_FOUND:
-        'oc registries not found. Run "oc registry add <registry href>"',
+        'Combee registries not found. Run "combee registry add <registry href>"',
       SERVERJS_DEPENDENCY_NOT_DECLARED:
         'Missing dependencies from package.json => {0}',
       TEMPLATE_NOT_FOUND: 'Error requiring oc-template: "{0}" not found',
@@ -222,7 +222,7 @@ module.exports = {
       USING_CREDS: 'Using specified credentials',
       HELP_HINT: 'Hint: Run -h with any command to show the help',
       HOT_RELOADING_DISABLED:
-        'OC dev is running with hot reloading disabled so changes will be ignored',
+        'Combee dev is running with hot reloading disabled so changes will be ignored',
       INSTALLING_DEPS:
         "Trying to install missing modules: {0}\nIf you aren't connected to the internet, or npm isn't configured then this step will fail...",
       LINKING_DEPENDENCIES:
@@ -238,10 +238,10 @@ module.exports = {
       PUBLISHED: 'Published -> {0}',
       PUBLISHING: 'Publishing -> {0}',
       REGISTERING_MOCKED_PLUGINS: 'Registering mocked plugins...',
-      REGISTRY_ADDED: 'oc registry added',
+      REGISTRY_ADDED: 'Combee registry added',
       REGISTRY_CREDENTIALS_REQUIRED: 'Registry requires credentials.',
-      REGISTRY_LIST: 'oc linked registries:',
-      REGISTRY_REMOVED: 'oc registry deleted',
+      REGISTRY_LIST: 'Combee linked registries:',
+      REGISTRY_REMOVED: 'Combee registry deleted',
       REGISTRY_STARTING: 'Starting dev registry on {0} ...',
       REGISTRY_LIVERELOAD_STARTING:
         'Starting live-reload server on port {0} ... (to disable use "--hotReloading=false")',

@@ -28,12 +28,12 @@ describe('cli : facade : registry : ls', () => {
     });
 
     it('should introduce the list of registries', () => {
-      expect(logSpy.warn.args[0][0]).to.equal('oc linked registries:');
+      expect(logSpy.warn.args[0][0]).to.equal('Combee linked registries:');
     });
 
     it('should log an error', () => {
       expect(logSpy.err.args[0][0]).to.equal(
-        'oc registries not found. Run "oc registry add <registry href>"'
+        'Combee registries not found. Run "combee registry add <registry href>"'
       );
     });
   });
@@ -54,7 +54,7 @@ describe('cli : facade : registry : ls', () => {
     });
 
     it('should introduce the list of registries', () => {
-      expect(logSpy.warn.args[0][0]).to.equal('oc linked registries:');
+      expect(logSpy.warn.args[0][0]).to.equal('Combee linked registries:');
     });
 
     it('should list the linked registries', () => {

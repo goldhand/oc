@@ -42,7 +42,7 @@ describe('cli : facade : registry : remove', () => {
     });
 
     it('should show a confirmation message', () => {
-      expect(logSpy.ok.args[0][0]).to.equal('oc registry deleted');
+      expect(logSpy.ok.args[0][0]).to.equal('Combee registry deleted');
     });
   });
 });

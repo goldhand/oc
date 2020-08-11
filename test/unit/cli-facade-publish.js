@@ -224,7 +224,7 @@ describe('cli : facade : publish', () => {
                 it('should show an error', () => {
                   expect(logSpy.err.args[0][0]).to.equal(
                     'An error happened when publishing the component: the version of used ' +
-                      'OC CLI is invalid. Try to upgrade OC CLI running ' +
+                      'Combee CLI is invalid. Try to upgrade Combee CLI running ' +
                       colors.blue('[sudo] npm i -g oc@1.23.X')
                   );
                 });

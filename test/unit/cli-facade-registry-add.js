@@ -42,7 +42,7 @@ describe('cli : facade : registry : add', () => {
     });
 
     it('should show a confirmation message', () => {
-      expect(logSpy.ok.args[0][0]).to.equal('oc registry added');
+      expect(logSpy.ok.args[0][0]).to.equal('Combee registry added');
     });
   });
 });
