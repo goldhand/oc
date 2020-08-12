@@ -34,7 +34,7 @@ module.exports = function(repository) {
     //   });
     // }
 
-    validationResult = validator.validateNodeVersion(
+    const validationResult = validator.validateNodeVersion(
       req.headers['user-agent'],
       process.version
     );
